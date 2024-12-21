@@ -45,16 +45,36 @@ contactForm.addEventListener('submit', event => {
         alert('Please enter a valid email address.');
     } else {
         const modal = document.querySelector('.thank-you-modal');
-        modal.style.display = 'block';
+        modal.classList.add('show');
         setTimeout(() => {
-            modal.style.display = 'none';
+            modal.classList.remove('show');
             contactForm.reset();
         }, 3000);
     }
 });
 
 // Toggle dark mode
-const toggleThemeButton = document.querySelector('.toggle-theme');
-toggleThemeButton.addEventListener('click', () => {
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode');
+});
+
+// Reveal sections on scroll
+const sections = document.querySelectorAll('section');
+const revealSection = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.1
+});
+
+sections.forEach(section => {
+    sectionObserver.observe(section);
 });

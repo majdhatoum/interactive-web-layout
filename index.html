@@ -6,13 +6,22 @@
     <title>Interactive Web Layout</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal_animation.css">
+    <link rel="stylesheet" href="button_hover.css">
+    <link rel="stylesheet" href="section_fade_in.css">
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
         <div class="container">
             <h1 class="logo">WebLayout</h1>
-            <button class="toggle-theme">Toggle Dark Mode</button>
+            <div class="theme-toggle-container">
+                <label class="theme-toggle">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Dark Mode</span>
+            </div>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link">Home</a></li>
@@ -31,6 +40,11 @@
             <p class="hero-text">Creating stunning layouts with ease.</p>
             <button class="cta-button">Learn More</button>
         </div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#00bcd4" d="M0,160L80,176C160,192,320,224,480,224C640,224,800,192,960,160C1120,128,1280,96,1360,80L1440,64V320H0Z"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- About Section -->
@@ -38,6 +52,11 @@
         <div class="container">
             <h2 class="section-title">About Us</h2>
             <p class="section-text">We are experts in creating web designs that stand out. Our mission is to deliver visually appealing and highly interactive designs that captivate and engage users.</p>
+        </div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#f4f4f4" d="M0,256L80,245.3C160,235,320,213,480,192C640,171,800,149,960,144C1120,139,1280,149,1360,154.7L1440,160V320H0Z"></path>
+            </svg>
         </div>
     </section>
 
