@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">WebLayout</h1>
+            <button class="toggle-theme">Toggle Dark Mode</button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="hero-title">Welcome to WebLayout</h2>
+            <p class="hero-text">Creating stunning layouts with ease.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-text">We are experts in creating web designs that stand out. Our mission is to deliver visually appealing and highly interactive designs that captivate and engage users.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-cards">
+                <!-- Service Card 1 -->
+                <div class="card">
+                    <h3 class="card-title">Design</h3>
+                    <p class="card-text">Beautiful and functional designs tailored to your needs.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="card">
+                    <h3 class="card-title">Development</h3>
+                    <p class="card-text">Robust, scalable, and secure development solutions.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="card">
+                    <h3 class="card-title">Support</h3>
+                    <p class="card-text">24/7 customer support to ensure smooth operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-text">Have questions or need assistance? Reach out to us!</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2024 WebLayout. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Thank You Modal -->
+    <div class="thank-you-modal" style="display: none;">
+        <p>Thank you for your message!</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
